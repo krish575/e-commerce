@@ -3,12 +3,27 @@ body{
   height: 100vh;
   overflow-x: hidden;
 }
+#unsen_logo{
+  width: 5rem;
+  height: 5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+#navbar_list{
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px soild black;
+}
 #navbar_list1{
   display: flex;
   gap: 2rem;
-  padding: 1rem;
+}
+#navbar_list2{
+  display: flex;
+  gap: 1rem;
 }
 .navbar_items{
+  height: fit-content;
   text-decoration: none;
   text-transform: uppercase;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -16,11 +31,30 @@ body{
   font-size: 0.8rem;
   font-weight: bold;
   transition: all 0.5s ease-in-out;
+  margin-top: auto;
+  margin-bottom: auto;
+  transform: scale(1);
 }
 .navbar_items:hover{
+  transform: scale(1.2);
   color: #0ec1ae;
-  transition: all 0.5s
-   ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.nav_icons{
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+}
+.nav_icons:hover{
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+}
+#navbar_list2{
+  display: flex;
+  justify-content: end;
 }
 #hero_banner{
   width: 100vw;
@@ -28,6 +62,7 @@ body{
   background-image: url(./assets/background.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
+  position: relative;
 }
 #hero_banner_wrapper{
   width: 25%;
@@ -65,6 +100,7 @@ body{
   transition: all 0.5s ease-in-out;
 }
 #hero_banner_product{
+  position: absolute;
   margin-left: 0.5rem;
   text-decoration: none;
   color: red;
@@ -72,10 +108,112 @@ body{
   font-size: 1rem;
   position: absolute;
   word-spacing: 0.5rem;
-  margin-top: 10rem;
+  margin-top: 7rem;
   transition: all 0.5s ease-in-out;
 }
 #hero_banner_product:hover{
   transition: all 0.5s ease-in-out;
   color: #0ec1ae;
+}
+#hero_banner_details_container1{
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: detailChanges1 6s infinite;
+}
+@keyframes detailChanges1 {
+  0%{
+    opacity: 1;
+  }
+  33%{
+    opacity: 0;
+  }
+  66%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+#hero_banner_details_container2{
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: detailChanges2 6s infinite;
+}
+@keyframes detailChanges2 {
+  0%{
+    opacity: 0;
+  }
+  33%{
+    opacity: 0;
+  }
+  66%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+#hero_banner_details_container3{
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: detailChanges3 6s infinite;
+}
+@keyframes detailChanges3 {
+  0%{
+    opacity: 0;
+  }
+  33%{
+    opacity: 0;
+  }
+  66%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.hero_banner_h3{
+  text-transform: uppercase;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+  margin: 0;
+  margin-top: 10rem;
+  font-size: 1.5rem;
+}
+.hero_banner_h1{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: white;
+  margin: 0;
+  font-size: 5rem;
+}
+.hero_banner_aTag{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: white;
 }
