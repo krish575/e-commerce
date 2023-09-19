@@ -1,14 +1,13 @@
-import { useState } from 'react';
 import './App.css';
-import Component_heroBanner from './components/heroBanner';
-import Component_navbar from './components/navbar';
+import HeroBanner from './components/HeroBanner';
+import Navbar from './components/Navbar';
 
 
 function App() {
   return (
     <>
-      <Component_navbar/>
-      <Component_heroBanner/>
+      <Navbar/>
+      <HeroBanner/>
     </>
   )
 }
