@@ -1,6 +1,7 @@
 import './App.css';
-import HeroBanner from './components/HeroBanner';
+import HeroBanner from './components/heroBanner';
 import Navbar from './components/Navbar';
+import Product from './components/Product';
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <>
       <Navbar/>
       <HeroBanner/>
+      <Product/>
     </>
   )
 }
