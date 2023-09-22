@@ -222,11 +222,11 @@ body{
   height: 100vh;
 }
 #product{
-  width: 30vw;
-  height: 50vh;
-  background-image: url(./assets/background.jpg);
+  width: 18rem;
+  aspect-ratio: 3/4;
+  background-image: url(./assets/other.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   position: relative;
   transition: all 0.5s ease-in-out;
 }
@@ -323,7 +323,7 @@ body{
   transition: all 0.5s ease-in-out;
 }
 #product:hover{
-  background-image: url(./assets/download.jpg);
+  background-image: url(./assets/another.jpg);
   transition: all 0.5s ease-in-out;
   #compare{
       transform: translateY(3rem);
