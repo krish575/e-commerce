@@ -1,0 +1,152 @@
+#product {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background-image: url("../assets/other.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* position: relative; */
+  transition: all 0.5s ease-in-out;
+  margin: auto
+}
+#Best_Seller {
+  background-color: white;
+  border-radius: 17px;
+  box-shadow: 10%;
+  padding: 0.3rem 0.5rem;
+  width: fit-content;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: black;
+  /* margin-left: 0.3rem;
+    margin-top: 0.3rem;
+    position: absolute;
+    font-size: 0.9rem;
+    padding: 0.1rem; */
+  transition: all 0.5s ease-in-out;
+}
+#wishlist {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+  border-radius: 80%;
+  width: fit-content;
+  background-color: white;
+    padding: 0.3rem;
+  transition: all 0.5s ease-in-out;
+}
+#compare {
+  border-radius: 80%;
+  width: fit-content;
+  background-color: white;
+  position: absolute;
+   top: 0;
+   right: 0;
+   z-index: 2;
+  padding: 0.3rem;
+  transition: all 0.5s ease-in-out;
+}
+#quick_view {
+  background-color: white;
+  border-radius: 10%;
+  box-shadow: 10%;
+  width: fit-content;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: black;
+  font-size: 0.9rem;
+  padding: 0.1rem;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+#quick_shop {
+  background-color: white;
+  border-radius: 10%;
+  box-shadow: 10%;
+  width: fit-content;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: black;
+  font-size: 0.9rem;
+  padding: 0.1rem;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+#size {
+  background-color: white;
+  border-radius: 10%;
+  box-shadow: 10%;
+  width: fit-content;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: black;
+  font-size: 0.9rem;
+  padding: 0.1rem;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  margin: 0 auto;
+  transform: translateY(-2rem);
+}
+#size p{
+    margin: 0;
+}
+#product:hover {
+  background-image: url("../assets/another.jpg");
+  transition: all 0.5s ease-in-out;
+  #compare {
+    transform: translateY(3rem);
+    transition: all 0.5s ease-in-out;
+  }
+  #quick_view {
+    opacity: 1;
+    transform: translateX(-0.2rem);
+    transition: all 0.5s ease-in-out;
+  }
+  #quick_shop {
+    opacity: 1;
+    transform: translateX(0.4rem);
+    transition: all 0.5s ease-in-out;
+  }
+  #size {
+    opacity: 1;
+    transform: translateY(-1rem);
+    transition: all 0.5s ease-in-out;
+    display: block
+  }
+}
+.product-head-container {
+  display: flex;
+  padding: 0.5rem;
+  justify-content: space-between;
+}
+
+.product_utilities {
+  position: relative;
+  z-index: 1;
+}
+.product-footer-container{
+    position: relative;
+  padding: 0.5rem;
+  gap: 1rem;
+  bottom: 0;
+}
+
+.product_utility-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product_promo_utilities{
+
+}
+.size_text{
+    text-transform: capitalize
+}
+
+.product_promo_utilities{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}

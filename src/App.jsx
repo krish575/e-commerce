@@ -8,8 +8,13 @@ function App() {
   return (
     <>
       <Navbar/>
-      <HeroBanner/>
-      <Product/>
+      <HeroBanner />
+      <div className='product_grid'>
+        <Product />
+        <Product />
+        <Product />
+        <Product />
+        </div>
     </>
   )
 }
