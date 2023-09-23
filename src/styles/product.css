@@ -1,14 +1,14 @@
-#product {
+.product {
   width: 100%;
   aspect-ratio: 3/4;
   background-image: url("../assets/other.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  /* position: relative; */
-  transition: all 0.5s ease-in-out;
-  margin: auto
+  background-size: 130% 120%;
+  transition: background-image 0.6s ease-in-out;
+  background-position: center;
+  margin: auto;
 }
-#Best_Seller {
+.Best_Seller {
   background-color: white;
   border-radius: 17px;
   box-shadow: 10%;
@@ -17,36 +17,121 @@
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: black;
-  /* margin-left: 0.3rem;
-    margin-top: 0.3rem;
-    position: absolute;
-    font-size: 0.9rem;
-    padding: 0.1rem; */
   transition: all 0.5s ease-in-out;
 }
-#wishlist {
+.wishlist {
     position: absolute;
     right: 0;
     top: 0;
     z-index: 3;
-  border-radius: 80%;
-  width: fit-content;
-  background-color: white;
+    border-radius: 80%;
+    width: fit-content;
+    background-color: white;
     padding: 0.3rem;
-  transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
-#compare {
+.wishlist:hover{
+  background-color: black;
+  cursor: pointer;
+}
+.wishlist:hover > svg{
+  fill: white;
+  animation: wishlist 1s infinite;
+}
+@keyframes wishlist {
+  0%{
+    transform: scale(1.2);
+  }
+  10%{
+    transform: scale(1);
+  }
+  20%{
+    transform: scale(1.2);
+  }
+  30%{
+    transform: scale(1);
+  }
+  40%{
+    transform: scale(1.2);
+  }
+  50%{
+    transform: scale(1);
+  }
+  60%{
+    transform: scale(1.2);
+  }
+  70%{
+    transform: scale(1);
+  }
+  80%{
+    transform: scale(1.2);
+  }
+  90%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(1.2);
+  }
+}
+.compare {
   border-radius: 80%;
   width: fit-content;
   background-color: white;
   position: absolute;
-   top: 0;
-   right: 0;
-   z-index: 2;
+  top: 0;
+  right: 0;
+  z-index: 2;
   padding: 0.3rem;
   transition: all 0.5s ease-in-out;
 }
-#quick_view {
+.compare:hover{
+  background-color: black;
+  cursor: pointer;
+}
+.compare:hover > svg{
+  fill: white;
+  animation: wishlist 1s infinite;
+}
+.quick_view {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 10%;
+  width: fit-content;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: black;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(0);
+  overflow: hidden;
+  height: 1rem;
+}
+.quick_view p{
+  margin: 0;
+  transition: all 0.5s ease-in-out;
+}
+.quick_view_icon{
+  width: fit-content;
+  margin: auto;
+  transform: translateY(20%);
+  transition: all 0.5s ease-in-out;
+}
+.quick_view:hover{
+  background-color: black;
+}
+.quick_view:hover  p{
+  transform: translateY(-50px);
+}
+.quick_view:hover > .quick_view_icon{
+  transform: translateY(-20px); 
+  transition: transform 0.5s ease-in-out;
+}
+.quick_view:hover > .quick_view_icon > svg path{
+  stroke: white;
+}
+.quick_shop {
   background-color: white;
   border-radius: 10%;
   box-shadow: 10%;
@@ -59,20 +144,7 @@
   opacity: 0;
   transition: all 0.5s ease-in-out;
 }
-#quick_shop {
-  background-color: white;
-  border-radius: 10%;
-  box-shadow: 10%;
-  width: fit-content;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  color: black;
-  font-size: 0.9rem;
-  padding: 0.1rem;
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
-}
-#size {
+.size {
   background-color: white;
   border-radius: 10%;
   box-shadow: 10%;
@@ -87,27 +159,29 @@
   margin: 0 auto;
   transform: translateY(-2rem);
 }
-#size p{
+.size p{
     margin: 0;
 }
-#product:hover {
+.product:hover {
   background-image: url("../assets/another.jpg");
-  transition: all 0.5s ease-in-out;
-  #compare {
+  /* transition: all 0.5s ease-in-out; */
+  background-size: 150%;
+  background-position: center;
+  .compare {
     transform: translateY(3rem);
     transition: all 0.5s ease-in-out;
   }
-  #quick_view {
+  .quick_view {
     opacity: 1;
     transform: translateX(-0.2rem);
     transition: all 0.5s ease-in-out;
   }
-  #quick_shop {
+  .quick_shop {
     opacity: 1;
     transform: translateX(0.4rem);
     transition: all 0.5s ease-in-out;
   }
-  #size {
+  .size {
     opacity: 1;
     transform: translateY(-1rem);
     transition: all 0.5s ease-in-out;
@@ -136,10 +210,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.product_promo_utilities{
-
 }
 .size_text{
     text-transform: capitalize
