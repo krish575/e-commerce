@@ -11,9 +11,6 @@ function App() {
       <HeroBanner />
       <div className='product_grid'>
         <Product />
-        <Product />
-        <Product />
-        <Product />
         </div>
     </>
   )
