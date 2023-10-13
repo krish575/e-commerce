@@ -3,7 +3,7 @@ import "../styles/product.css";
 import ColorVariants from "./ColorVariants";
 import { useEffect } from "react";
 
-const Product = ({ product_details, ...props }) => {
+const Product = ({ product_details }) => {
   
   const dummy = (param) => {
     let product = document.getElementById(product_details.id);
