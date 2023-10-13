@@ -1,0 +1,24 @@
+{
+    "data": {
+        "students":[
+            {
+                "id": 1,
+                "name": "pratik",
+                "age": 10,
+                "residence": "Ahmedabad"
+            },
+            {
+                "id": 2,
+                "name": "pratik",
+                "age": 10,
+                "residence": "Ahmedabad"
+            },
+            {
+                "id": 3,
+                "name": "pratik",
+                "age": 10,
+                "residence": "Ahmedabad"
+            }
+        ]
+    }
+}

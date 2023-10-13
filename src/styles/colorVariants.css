@@ -1,0 +1,21 @@
+
+.variant_wrapper {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 100%;
+    padding: 0.1rem;
+    border: 1px solid gray;
+  }
+  
+  .variant{
+    width: 0.2rem;
+    height: 0.2rem;
+    border-radius: 100%;
+    
+    padding: 0.4rem;
+  }
+  
+  .variant_wrapper:hover{
+    border: 1px solid red;
+    cursor: pointer;
+  }

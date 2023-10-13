@@ -228,3 +228,21 @@ body{
     padding-inline: 0.5rem;
     padding: 1rem 2rem;
 }
+
+@media screen and (max-width: 374px) {
+  .product_grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .product_grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.transition {
+  transition: all 0.3s linear;
+}

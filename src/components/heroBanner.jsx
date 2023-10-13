@@ -1,6 +1,9 @@
+import Sidebar from "./Sidebar";
+
 const HeroBanner = () => {
   return (
     <div id="hero_banner">
+    <Sidebar/>
       <div id="hero_banner_details_container1">
         <h3 className="hero_banner_h3">western</h3>
         <h1 className="hero_banner_h1">New Arrivals</h1>

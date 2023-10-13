@@ -1,49 +1,30 @@
+import { Link } from "react-router-dom";
 import "../styles/product.css";
+import ColorVariants from "./ColorVariants";
+import { useEffect } from "react";
 
-const Product = () => {
-  const product_details = {
-    name: "Bella Tie Shoulder Cami Multi Colors",
-    primary_showcase_image:
-      "https://images.unsplash.com/photo-1695338029970-16458268a24a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2864&q=80",
-    secondary_showcase_image: "../assets/other.jpg",
-    price: {
-      type: "range",
-      min: "10",
-      max: "100",
-    },
-    variants: {
-      sizes: ["x", "m", "s"],
-      colors: [
-        {
-          id: 1,
-          color: "red",
-          image: "../assets/other.jpg",
-        },
-        {
-          id: 2,
-          color: "blue",
-          image: "../assets/another.jpg",
-        },
-        {
-          id: 3,
-          color: "black",
-          image: "../assets/other.jpg",
-        },
-      ],
-    },
-    wishlist: true,
-    cart: true,
-    bestSeller: false,
+const Product = ({ product_details, ...props }) => {
+  
+  const dummy = (param) => {
+    let product = document.getElementById(product_details.id);
+    product.style.backgroundImage = "url(" + param + ")";
+    console.log('product.style.backgroundImage',product.style.backgroundImage);
   };
+  useEffect(()=>{
+    dummy(product_details.variants.colors[0].image)
+  }, [])
+
+  useEffect(()=>{
+    //logic
+  },[
+    //dependency
+  ])
+
+  
 
   return (
     <div className="product_wrapper">
-      <div
-        className="product"
-        style={{
-          backgroundImage: `url(${product_details.primary_showcase_image})`,
-        }}
-      >
+      <Link className="product" id={`${product_details.id}`} to={`/products/${product_details.id}`}>
         <div className="product_utility-container">
           <div className="product-head-container">
             {product_details.bestSeller && (
@@ -55,14 +36,14 @@ const Product = () => {
                   width="20px"
                   height="20px"
                   viewBox="0 0 24 24"
-                  fill={`${product_details.wishlist ? "red":"none"}`}
+                  fill={`${product_details.wishlist ? "red" : "none"}`}
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     fillRule="evenodd"
                     clipRule="evenodd"
                     d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
-                    stroke={`${product_details.wishlist ? "red":"black"}`}
+                    stroke={`${product_details.wishlist ? "red" : "black"}`}
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -153,7 +134,7 @@ const Product = () => {
             </div>
           </div>
         </div>
-      </div>
+      </Link>
       <div className="product_details">
         {/* ternary operator */}
         {product_details.price.type === "range" ? (
@@ -170,11 +151,11 @@ const Product = () => {
         ) : (
           <h5>$00</h5>
         )}
-        <h4>Bella Tie Shoulder Cami Multi Colors</h4>
-
-        <div className="variant_wrapper">
-          <div className="variant"></div>
-        </div>
+        <h4>{product_details.name}</h4>
+        <ColorVariants
+          dummyFn={(e) => dummy(e)}
+          colors={product_details.variants?.colors}
+        />
       </div>
     </div>
   );

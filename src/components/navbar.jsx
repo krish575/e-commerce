@@ -6,10 +6,15 @@ import shoppingBag from "../assets/shopping-bag-1-svgrepo-com.svg";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const open = (id) => {
+    const element = document.getElementById(`${id}`);
+    element.style.transform = 'translateX(0%)';
+    element.classList.add('transition')
+  }
   return (
     <section>
       <nav id="navbar_list">
-        <img src={mainLogo} id="unsen_logo"></img>
+        <img src={mainLogo} id="unsen_logo"></img>    
         <ul id="navbar_list1">
           <Link to="/" className="navbar_items">
             Home
@@ -37,7 +42,7 @@ const Navbar = () => {
           <a href="#none" className="nav_icons">
             <img src={wishlist} className="nav_icons"></img>
           </a>
-          <a href="#none" className="nav_icons">
+          <a href="#none" className="nav_icons" onClick={()=> open('sidebar_wrappper')}>
             <img src={shoppingBag} className="nav_icons"></img>
           </a>
         </ul>
