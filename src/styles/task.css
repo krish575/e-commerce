@@ -1,0 +1,39 @@
+.product_layout{
+    width: 99%;
+    aspect-ratio: 1/1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+    margin: 0;
+}
+.PRODUCT{
+    border: 1px solid black;
+    padding: 1rem;
+}
+.product_image{
+    width: 50%;
+    aspect-ratio: 1/1;
+}
+.product_price{
+    text-align: center;
+}
+.product_category{
+    text-transform: uppercase;
+}
+.product_quantity{
+    margin: 0;
+    text-align: end;
+}
+.product_rating{
+    margin-bottom: 0;
+    text-align: end;
+}
+.image_wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.product_title{
+    text-align: center;
+}

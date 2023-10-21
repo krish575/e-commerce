@@ -1,7 +1,8 @@
 import "./App.css";
 import ProductsGrid from "./components/ProductsGrid";
-import HeroBanner from "./components/heroBanner";
-import Navbar from "./components/navbar";
+import HeroBanner from "./components/HeroBanner";
+import Navbar from "./components/Navbar";
+import Task from "./components/Task";
 
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
     <div>
       <Navbar />
       <HeroBanner />
-     <ProductsGrid/>
+     {/* <ProductsGrid/> */}
+     <Task/>
     </div>
   );
 }
