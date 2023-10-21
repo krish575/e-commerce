@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./App.css";
 import ProductsGrid from "./components/ProductsGrid";
 import HeroBanner from "./components/HeroBanner";

@@ -7,6 +7,7 @@ import Shop from "./routes/Shop.jsx";
 import WomenClothingWear from "./routes/WomenClothingWear.jsx";
 import ProductDetail from "./routes/ProductDetail.jsx";
 import Products from "./routes/Products.jsx";
+import Form from "./components/Form.jsx";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: '/shop/products',
     element: <Products/>
+  },
+  {
+    path: '/auth/form',
+    element: <Form/>
   }
 ]);
 
