@@ -8,6 +8,7 @@ import WomenClothingWear from "./routes/WomenClothingWear.jsx";
 import ProductDetail from "./routes/ProductDetail.jsx";
 import Products from "./routes/Products.jsx";
 import Form from "./components/Form.jsx";
+import TestRoute from "./routes/TestRoute.jsx";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: '/auth/form',
     element: <Form/>
+  },
+  {
+    path: '/test',
+    element: <TestRoute/>
   }
 ]);
 

@@ -1,17 +1,13 @@
-import React from 'react'
+import React, { memo } from 'react'
 
-const DummyComponent = ({data, ...props}) => {
-    // const data = props;
-    console.log(data
-      );
+const DummyComponent = ({ arr, demoFn, ...props}) => {
+  console.log('child render')
     return (
     <div>
-        <h1>id:{data.id} </h1>
-        <h1>name:{data.name}</h1>
-        <h1>residence:{data.residence}</h1>
-        <h1>age:{data.age}</h1>
+        <button onClick={() => demoFn()}>add prop</button>
+        <h1>{ JSON.stringify(arr, null) }</h1>
     </div>
   )
 }
 
-export default DummyComponent
+export default memo(DummyComponent)

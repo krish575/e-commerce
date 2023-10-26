@@ -261,3 +261,16 @@ body{
 .transition {
   transition: all 0.3s linear;
 }
+
+.elementA {
+  position: relative;
+}
+.elementB {
+  position: absolute;
+  transform: translateY(0%);
+}
+
+.elementA:hover .elementB {
+  display: block;
+
+}
