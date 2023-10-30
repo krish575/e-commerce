@@ -1,0 +1,7 @@
+.validated {
+    background: green;
+}
+
+.not-valid{
+    background: red;
+}

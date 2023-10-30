@@ -11,8 +11,8 @@ function App() {
     <div>
       <Navbar />
       <HeroBanner />
-     {/* <ProductsGrid/> */}
-     <Task/>
+     <ProductsGrid/>
+     {/* <Task/> */}
     </div>
   );
 }
