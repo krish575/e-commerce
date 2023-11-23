@@ -10,42 +10,52 @@ import Products from "./routes/Products.jsx";
 import Form from "./components/Form.jsx";
 import TestRoute from "./routes/TestRoute.jsx";
 import TestRoute2 from "./routes/TestRoute2.jsx";
+import FormTest2 from "./routes/FormTest2";
+import FormTest from "./routes/FormTest";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
   },
+//   {
+//     path: '/shop',
+//     element: <Shop />,
+//     children: [
+//     ],
+//   },
+//   {
+//     path: "/shop/women",
+//     element: <WomenClothingWear />,
+//   },
+//   {
+//     path: "products/:id",
+//     element: <ProductDetail/>
+//   },
+//   {
+//     path: '/shop/products',
+//     element: <Products/>
+//   },
+//   {
+//     path: '/auth/form',
+//     element: <Form/>
+//   },
+//   {
+//     path: '/test',
+//     element: <TestRoute/>
+//   },
+//   {
+//     path: '/test2',
+//     element: <TestRoute2/>
+//   },
   {
-    path: '/shop',
-    element: <Shop />,
-    children: [
-    ],
+    path: '/FormTest2',
+    element: <FormTest2/>
   },
-  {
-    path: "/shop/women",
-    element: <WomenClothingWear />,
-  },
-  {
-    path: "products/:id",
-    element: <ProductDetail/>
-  },
-  {
-    path: '/shop/products',
-    element: <Products/>
-  },
-  {
-    path: '/auth/form',
-    element: <Form/>
-  },
-  {
-    path: '/test',
-    element: <TestRoute/>
-  },
-  {
-    path: '/test2',
-    element: <TestRoute2/>
-  }
+//   {
+//     path: '/FormTest',
+//     element: <FormTest/>
+//   }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
